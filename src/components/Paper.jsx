@@ -8,13 +8,13 @@ export function Paper(props) {
   const resumeTexture = useTexture(resume); // Use ref to track the click state
 
   // Spring animation for position and scale, based on the `clickedRef`
-  const { scale, position, rotation } = useSpring({
+  const { scale, position } = useSpring({
     scale: props.animationRunning ? [7, 7, 7] : [0, 0, 0], // Scale up when clicked
     position: props.animationRunning ? [-3, 4.5, 0] : [0.1, 0.159, -0.1],
-    rotation: props.animationRunning
-      ? [Math.PI * 2.2,0,0] // Rotate by 45 degrees on all axes
-      : [Math.PI / 20, 0, 0], // Slight rotation when not clicked // Change position when clicked
-    config: { tension: 170, friction: 26, delay: 5500 }, // Smooth transition
+    // rotation: props.animationRunning
+    //   ? [Math.PI * 2.2,0,0] // Rotate by 45 degrees on all axes
+    //   : [Math.PI / 20, 0, 0], // Slight rotation when not clicked // Change position when clicked
+    config: { tension: 150, friction: 26, delay: 2000 }, // Smooth transition
   });
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export function Paper(props) {
         material={materials['Material.001']}
         scale={scale}
         position={position}
-        rotation={rotation} // Optional rotation to add some dynamic effect
+       // Optional rotation to add some dynamic effect
       />
     </animated.group>
   );
