@@ -32,6 +32,8 @@ import { OpenBook } from "./OpenBook";
 
 
 
+
+
 const SECTIONS_DISTANCE = 10;
 
 export const Experience = () => {
@@ -104,9 +106,9 @@ export const Experience = () => {
               rotation-y={Math.PI / 4}
             />
           
-          
+          <OpenBook/>
           <Float floatIntensity={0.5} speed={0.5}>
-            <OpenBook/>
+            
           </Float>
           
           <PalmTree
