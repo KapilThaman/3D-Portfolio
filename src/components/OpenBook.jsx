@@ -19,7 +19,7 @@ export function OpenBook(props) {
   
 
   const handleClick = () => {
-    window.open('public/resume/Kapil Thaman Software Developer 1.pdf', '_blank');
+    window.open('/resume/Kapil Thaman Software Developer 1.pdf', '_blank');
   };
 
   return (
